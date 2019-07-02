@@ -1,6 +1,6 @@
 from janome.tokenizer import Tokenizer
 import re
-from app.dictionary import lookup_dic
+from japana.dictionary import lookup_dic
 
 
 def word_count(text, kana=False, asc=True, _dict=False):
