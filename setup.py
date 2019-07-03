@@ -3,13 +3,22 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r") as fh:
-    requirements = fh.read().splitlines()
+
+requirements = [
+'chirptext==0.1a18',
+'jamdict==0.1a4',
+'Janome==0.3.9',
+'lxml==4.3.4',
+'mecab-python3==0.996.2',
+'puchikarui==0.1a2',
+'style==1.1.0',
+'update==0.0.1',
+]
 
 
 setuptools.setup(
     name='japana',
-    version='0.2',
+    version='0.4',
     author="reem-codes | Reem Ali Alghamdi",
     author_email="reem.brain@gmail.com",
     description="Japanese text analysis",
