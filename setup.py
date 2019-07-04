@@ -18,7 +18,7 @@ requirements = [
 
 setuptools.setup(
     name='japana',
-    version='0.4',
+    version='1.0',
     author="reem-codes | Reem Ali Alghamdi",
     author_email="reem.brain@gmail.com",
     description="Japanese text analysis",
