@@ -6,7 +6,6 @@ with open("README.md", "r") as fh:
 
 requirements = [
 'chirptext==0.1a18',
-'jamdict==0.1a4',
 'Janome==0.3.9',
 'lxml==4.3.4',
 'mecab-python3==0.996.2',

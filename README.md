@@ -10,9 +10,14 @@ and depending on configurations: pronunciation and meaning
 
 # Requirements
 
-all requirements all stored in `requirements.txt`. In addition, you need to install my forked version of Jamdict here[Jamdict](https://github.com/reem-codes/jamdict)
+all requirements all stored in `requirements.txt`. In addition, you need to install my forked version of Jamdict here [Jamdict](https://github.com/reem-codes/jamdict)
 
 
+# Installation:
+
+1. run `pip install japama` in your venv/env/virtual_env
+2. run `pip install git+https://github.com/reem-codes/jamdict` 
+3. go to [Jamdict](https://github.com/neocl/jamdict)  official project and follow any instructions
 
 # Other Projects
 
