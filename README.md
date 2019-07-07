@@ -1,6 +1,6 @@
 # About 
 
-This is Japana. a Japanese analysis tool using Jim Breen's JMdict & KanjiDic2.
+This is Japana. a Japanese analysis tool using Jim Breen's JMdict & KanjiDic2 & mecab.
 
 
 You need to provide a text: novel, short story, song lyrics, article, sentence ..etc. 

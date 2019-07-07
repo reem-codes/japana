@@ -2,6 +2,7 @@ from janome.tokenizer import Tokenizer
 import re
 from japana.dictionary import lookup_dic
 from japana.kanji_count import extract_unicode_block
+from japana.progress_bar import printProgressBar
 
 
 def word_count(text, kana=False, asc=True, _dict=False, celery=None):
@@ -31,6 +32,7 @@ def word_count(text, kana=False, asc=True, _dict=False, celery=None):
         if celery:
             meta = {'current': index, 'total': len(words)}
             celery.update_state(state='PROGRESS', meta=meta)
+        printProgressBar(index, len(words), suffix='words has been done', length=50)
         if _dict:
             try:
                 word_dic = lookup_dic(value["word"])

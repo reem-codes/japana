@@ -34,50 +34,5 @@ def list_kanji(str):
     f.close()
     vocab = ''.join(extract_unicode_block(kanji, vocab))
     kanji_list = remove_duplicate(vocab)
-    # print(len(kanji_list), kanji_list)
     print("unique kanji count: ", len(kanji_list))
     return kanji_list
-#
-#
-# word = list_kanji("word.csv")
-# jlpt = list_kanji("jlpt.csv")
-# n3 = list_kanji("jlpt3.csv")
-# done = list_kanji("exportcsv.csv")
-# kanji_list = word + jlpt + done + n3
-# kanji_list = remove_duplicate(kanji_list)
-# print(len(kanji_list), kanji_list)
-#
-# print("kanji left in kanjidamage: ")
-#
-# f = open("kanjidamage.csv", "r")
-# kd = f.read()
-# f.close()
-# new_kanji = list(set(kd)^set(kanji_list))
-# new_kanji = ''.join(new_kanji)
-# print(len(new_kanji), new_kanji)
-# new_kanji = ''.join(extract_unicode_block(kanji, new_kanji))
-# print(len(new_kanji), new_kanji)
-#
-# old = open("KanjiDamage Reordered.txt", "r")
-# new_file = open("new_kanjiDamage.txt", "a")
-# new_file.truncate(0)
-# for line in old:
-#     word = line.split("\t", 2)[1]
-#     if word in new_kanji and re.match(kanji, word):
-#         new_file.write(line)
-# new_file.close()
-# old.close()
-#
-
-#
-# new = ''
-# doc = open("new_kanjiDamage.txt", 'r')
-# for line in doc:
-#     new = new + line.split("\t", 2)[1]
-#
-# print(len(new), new)
-#
-# now = list_kanji("now.csv")
-# exclude = list(set(new)^set(now))
-# exclude = ''.join(exclude)
-# print(len(exclude), exclude)

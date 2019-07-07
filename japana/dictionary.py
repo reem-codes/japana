@@ -9,7 +9,9 @@ def lookup_dic(word):
     for entry in result:
         if entry['kanji'][0]['text'] == word:
             word_dic['word'] = entry['kanji'][0]['text']
-            word_dic['pronunciation'] = entry['kana'][0]['text']
+            word_dic['pronunciation'] = ""
+            for k, p in enumerate(entry['kana'], start=1):
+                word_dic['pronunciation'] += str(k) + ". " + p['text'] + "<br>"
             word_dic['meaning'] = ""
             for j, meaning in enumerate(entry['senses'], start=1):
                 if j >= 3:
