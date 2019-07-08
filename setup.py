@@ -7,6 +7,7 @@ with open("README.md", "r") as fh:
 requirements = [
 'chirptext==0.1a18',
 'Janome==0.3.9',
+'jamdict==0.1a5',
 'lxml==4.3.4',
 'mecab-python3==0.996.2',
 'puchikarui==0.1a2',
@@ -17,7 +18,7 @@ requirements = [
 
 setuptools.setup(
     name='japana',
-    version='1.2',
+    version='1.2.2',
     author="reem-codes | Reem Ali Alghamdi",
     author_email="reem.brain@gmail.com",
     description="Japanese text analysis",
