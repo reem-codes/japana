@@ -12,7 +12,6 @@ def lookup_dic(word, igonre=True):
             word_dic['pronunciation'] = ""
             for k, p in enumerate(entry['kana'], start=1):
                 if len(entry['kana']) == 1:
-                    print("one phonetic")
                     word_dic['pronunciation'] += p['text']
                 else:
                     word_dic['pronunciation'] += str(k) + ". " + p['text'] + "<br>"

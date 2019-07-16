@@ -25,6 +25,6 @@ This project has been made into:
 * Web app: [Japana](http://japana.reem-codes.com)
 
 # what's new?
-## 1.2.3:
+## 1.3:
 * ability to ignore words with no definitions
 * JLPT level provided
