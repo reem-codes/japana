@@ -24,4 +24,7 @@ This project has been made into:
 * CLI application: [Japana-CLI](https://github.com/reem-codes/japana-cli)
 * Web app: [Japana](http://japana.reem-codes.com)
 
-
+# what's new?
+## 1.2.3:
+* ability to ignore words with no definitions
+* JLPT level provided

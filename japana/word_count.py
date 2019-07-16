@@ -3,11 +3,12 @@ import re
 from japana.dictionary import lookup_dic
 from japana.kanji_count import extract_unicode_block
 from japana.progress_bar import printProgressBar
+from japana.word_classifier import word_classifier
 
 
-def word_count(text, kana=False, asc=True, _dict=False, celery=None):
+def word_count(text, kana=False, asc=True, _dict=False, ignore=True, celery=None):
     kanji = r'[ぁ-ゟ]*[㐀-䶵一-鿋豈-頻][ぁ-ゟ]*'
-    letters = r'[ぁ-んァ-ン一-龯]|[㐀-䶵一-鿋豈-頻]'
+    letters = r'[ぁ-んァ-ン一-龯]|[㐀-䶵一-鿋豈-頻]\s'
     t = Tokenizer()
     tokens = t.tokenize(''.join(extract_unicode_block(letters, text)))
     print("total word count: ", len(tokens))
@@ -35,12 +36,20 @@ def word_count(text, kana=False, asc=True, _dict=False, celery=None):
         printProgressBar(index, len(words), suffix='words has been done', length=50)
         if _dict:
             try:
-                word_dic = lookup_dic(value["word"])
+                word_dic = lookup_dic(value["word"], ignore)
+                if word_dic is None:
+                    pass
+                word_dic['frequency'] = value["frequency"]
+                word_dic['jlpt'] = word_classifier(word_dic['word'])
+                word_list.append(word_dic)
+
             except:
                 pass
-        word_dic['word'] = value["word"]
-        word_dic['frequency'] = value["frequency"]
-        word_list.append(word_dic)
+        else:
+            word_dic['word'] = value["word"]
+            word_dic['jlpt'] = word_classifier(word_dic['word'])
+            word_dic['frequency'] = value["frequency"]
+            word_list.append(word_dic)
     return word_list
 
 
