@@ -7,7 +7,7 @@ idna==2.8
 jamdict==0.1a5
 Janome==0.3.9
 japana==1.0
-lxml==4.3.4
+lxml==4.6.2
 mecab-python3==0.996.2
 pkginfo==1.5.0.1
 puchikarui==0.1a2

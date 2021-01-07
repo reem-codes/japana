@@ -8,7 +8,7 @@ requirements = [
 'chirptext==0.1a18',
 'Janome==0.3.9',
 'jamdict==0.1a5',
-'lxml==4.3.4',
+'lxml==4.6.2',
 'mecab-python3==0.996.2',
 'puchikarui==0.1a2',
 'style==1.1.0',
